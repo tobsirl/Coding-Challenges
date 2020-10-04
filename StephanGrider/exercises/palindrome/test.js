@@ -35,3 +35,11 @@ test('"pennep" a palindrome', () => {
 test('"Paul Tobin" a palindrome', () => {
   expect(palindrome('Paul Tobin')).toBeFalsy();
 });
+
+test('"racecar" a palindrome', () => {
+  expect(palindrome('racecar')).toBeTruthy();
+});
+
+test('"A man, a plan, a canal – Panama" a palindrome', () => {
+  expect(palindrome('A man, a plan, a canal – Panama')).toBeFalsy();
+});
