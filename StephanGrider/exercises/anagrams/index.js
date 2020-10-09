@@ -8,38 +8,60 @@
 //   anagrams('RAIL! SAFETY!', 'fairy tales') --> True
 //   anagrams('Hi there', 'Bye there') --> False
 
-function formatString(string) {
-  return string.replace(/[^\w]/g).toLowerCase();
+function formatString(str) {
+  return str.replace(/[^\w]/g).toLowerCase();
 }
 
-function buildCharMap(string) {
-  let charMap = {};
-
-  for (let key of string) {
-    charMap[key] = charMap[key] + 1 || 1;
-  }
-
-  return charMap;
+function sortString(str) {
+  return str.split('').sort().join('');
 }
 
 function anagrams(stringA, stringB) {
-  const wordOne = formatString(stringA);
-  const wordTwo = formatString(stringB);
+  const formatA = formatString(stringA);
+  const formatB = formatString(stringB);
 
-  let firstString = buildCharMap(wordOne);
-  let secondString = buildCharMap(wordTwo);
+  const sortA = sortString(formatA);
+  const sortB = sortString(formatB);
 
-  if (Object.keys(firstString).length !== Object.keys(secondString).length) {
-    return false;
-  }
+  console.log(`A: ${sortA}
+B: ${sortB}
+  `);
 
-  for (let char in firstString) {
-    // Not checking the keys, checking numbers
-    if (firstString[char] !== secondString[char]) {
-      return false;
-    }
-  }
-  return true;
+  return sortA === sortB;
 }
 
 module.exports = anagrams;
+
+// function formatString(string) {
+//   return string.replace(/[^\w]/g).toLowerCase();
+// }
+
+// function buildCharMap(string) {
+//   let charMap = {};
+
+//   for (let key of string) {
+//     charMap[key] = charMap[key] + 1 || 1;
+//   }
+
+//   return charMap;
+// }
+
+// function anagrams(stringA, stringB) {
+//   const wordOne = formatString(stringA);
+//   const wordTwo = formatString(stringB);
+
+//   let firstString = buildCharMap(wordOne);
+//   let secondString = buildCharMap(wordTwo);
+
+//   if (Object.keys(firstString).length !== Object.keys(secondString).length) {
+//     return false;
+//   }
+
+//   for (let char in firstString) {
+// Not checking the keys, checking numbers
+//     if (firstString[char] !== secondString[char]) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
