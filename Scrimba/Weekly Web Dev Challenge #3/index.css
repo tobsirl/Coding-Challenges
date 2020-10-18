@@ -1,0 +1,66 @@
+/*
+
+PART 1:
+
+You've been ordered to improve your company's newsletter form. 
+You can design it however you want, but the manager wants the button to
+animate both on the :hover and the :active state.
+
+1. Redesign the page (e.g. colors, positions, sizing, spacing)
+2. Improve the button's hover effect
+3. Improve thee button's click effect
+
+SKILLS:
+color, background, margin, padding, border-radius, 
+CSS pseudo selectors (:active, :hover), transform
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #eee;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h3 {
+  color: green;
+  margin-top: 20px;
+  margin-bottom: 2em;
+}
+
+input {
+  display: inline-block;
+  border-radius: 10px;
+  width: 200px;
+  border: none;
+}
+
+button {
+  display: inline-block;
+  border-radius: 2px;
+  background: black;
+  font-size: 15px;
+  color: #fff;
+  padding: 1.25em 2em;
+}
+
+button:hover {
+  font-size: 20px;
+}
+
+button:active {
+  color: red;
+}
+
+.hide {
+  visibility: hidden;
+}
