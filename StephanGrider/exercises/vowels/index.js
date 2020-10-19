@@ -9,14 +9,10 @@
 
 function vowels(str) {
   let count = 0;
+  const string = ['a', 'e', 'i', 'o', 'u'];
+
   for (let letter of str.toLowerCase()) {
-    if (
-      letter === 'a' ||
-      letter === 'e' ||
-      letter === 'i' ||
-      letter === 'o' ||
-      letter === 'u'
-    ) {
+    if (string.includes(letter)) {
       count++;
     }
   }
