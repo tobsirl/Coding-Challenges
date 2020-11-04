@@ -8,6 +8,17 @@
 // Example:
 //   fib(4) === 3
 
+// Recursive solution
+function fib(n) {
+  // base case
+  if (n < 2) {
+    return n;
+  }
+
+  return fib(n - 1) + fib(n - 2);
+}
+
+// Iterative solution
 function fib(n) {
   let result = [0, 1];
 
