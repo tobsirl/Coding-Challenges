@@ -8,8 +8,22 @@
 // Example:
 //   fib(4) === 3
 
+function memoize(fn) {
+  const cache = {};
+  return function (...args) {
+    if (cache[args]) {
+      return cache[args];
+    }
+
+    const result = fn.apply(this, args);
+    cache[args] = result;
+
+    return result;
+  };
+}
+
 // Recursive solution
-function fib(n) {
+function slowFib(n) {
   // base case
   if (n < 2) {
     return n;
@@ -18,18 +32,30 @@ function fib(n) {
   return fib(n - 1) + fib(n - 2);
 }
 
+const fib = memoize(slowFib);
+
+// Recursive solution
+// function fib(n) {
+// base case
+//   if (n < 2) {
+//     return n;
+//   }
+
+//   return fib(n - 1) + fib(n - 2);
+// }
+
 // Iterative solution
-function fib(n) {
-  let result = [0, 1];
+// function fib(n) {
+//   let result = [0, 1];
 
-  for (let i = 2; i <= n; i++) {
-    const a = result[i - 1];
-    const b = result[i - 2];
+//   for (let i = 2; i <= n; i++) {
+//     const a = result[i - 1];
+//     const b = result[i - 2];
 
-    result.push(a + b);
-  }
+//     result.push(a + b);
+//   }
 
-  return result[n];
-}
+//   return result[n];
+// }
 
 module.exports = fib;
