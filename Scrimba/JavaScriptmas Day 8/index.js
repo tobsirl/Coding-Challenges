@@ -14,8 +14,42 @@ function rollDice() {
   return Math.floor(Math.random() * 6) + 1;
 }
 
+function changeDice() {
+  const diceNumber = rollDice();
+  console.log(diceNumber);
+
+  const diceToDotNumbers = {
+    1: [4],
+    2: [2, 6],
+    3: [2, 4, 6],
+    4: [0, 2, 6, 8],
+    5: [0, 2, 4, 6, 8],
+    6: [0, 2, 3, 5, 6, 8],
+  };
+
+  const showDots = diceToDotNumbers[diceNumber];
+
+  let j = 0;
+  for (let i = 0; i < dots.length; i++) {
+    if (i === showDots[j]) {
+      dots[i].classList.remove('hide');
+      j++;
+    } else {
+      dots[i].classList.add('hide');
+    }
+  }
+  const display = document.querySelector('.display');
+  display.innerHTML = `<h1>Roll: ${diceNumber}</h1>`
+}
+
 const dice = document.querySelector('.dice');
-dice.addEventListener('click', () => rollDice());
+const dots = Array.from(document.querySelectorAll('.dice div'));
+
+
+
+
+dots[4].classList.remove('hide');
+dice.addEventListener('click', () => changeDice());
 
 /*
 
