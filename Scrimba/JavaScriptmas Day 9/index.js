@@ -10,3 +10,5 @@ function sumOddFibonacciNumbers(num) {
 
   return arrFib.filter((x) => x % 2 != 0).reduce((a, b) => a + b);
 }
+
+module.exports = sumOddFibonacciNumbers;
