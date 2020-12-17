@@ -1,5 +1,6 @@
 function differentSymbolsNaive(str) {
-  // return [...new Set(str)].length;
+  if (!str) return null;
+  return [...new Set(str)].length;
 }
 
 module.exports = differentSymbolsNaive;
