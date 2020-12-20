@@ -1,3 +1,5 @@
+const domainType = require('./index');
+
 describe('domainType', () => {
   test('returns list of domain types', () => {
     // arrange
