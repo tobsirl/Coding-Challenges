@@ -1,4 +1,4 @@
-const extractMatrixColumn = require(".");
+const extractMatrixColumn = require('.');
 
 describe('extractMatrixColumn', () => {
   test('returns largest positive integer possible for digit count 1', () => {
@@ -31,5 +31,22 @@ describe('extractMatrixColumn', () => {
 
     // assert
     expect(result).toEqual([2, 4, 6]);
+  });
+
+  test('returns largest positive integer possible for digit count 3', () => {
+    // arrange
+    const matrix = [
+      [5, 1, 7, 2, 3],
+      [1, 5, 0, 4, 8],
+      [2, 1, 3, 6, 2],
+      [7, 3, 9, 1, 5],
+    ];
+    const column = 1;
+
+    // act
+    const result = extractMatrixColumn(matrix, column);
+
+    // assert
+    expect(result).toEqual([1, 5, 1, 3]);
   });
 });
