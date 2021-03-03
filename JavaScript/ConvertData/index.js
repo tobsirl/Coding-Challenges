@@ -4,7 +4,15 @@ const obj = {
   days: [0, 1, 2],
 };
 
+const s = 'days';
 
+function getDays(obj) {
+  const { key, value } = obj;
+
+  return `Key ${key} Value ${value}`; //?
+}
+
+getDays(obj);
 
 const arr = [...obj.days];
 
@@ -20,7 +28,9 @@ obj.days; //?
 
 const days = 'days';
 const test = obj[days].map((d) => {
-  let key;
+  let arrTest = []
+  let key
+  let value = obj.start_minute
   if (d === 0) {
     key = 'Sunday';
   }
@@ -36,7 +46,7 @@ const test = obj[days].map((d) => {
   }
 
   return {
-    [key]: [],
+    [key]: arrTest[0].start_minute = value,
   };
 });
 
@@ -92,5 +102,3 @@ const converted = {
   Monday: [{ start_minute: 90, end_minute: 210 }],
   Tuesday: [{ start_minute: 90, end_minute: 210 }],
 };
-
-
