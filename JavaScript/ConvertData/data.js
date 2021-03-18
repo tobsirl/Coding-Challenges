@@ -16,7 +16,7 @@ const data = [
   },
 ];
 
-const timesArr = [
+const dayIndexedTimes = [
   [
     {
       start_minute: 90,
@@ -77,6 +77,6 @@ const timesArr = [
   ],
 ];
 
-export { data, timesArr };
+export { data, dayIndexedTimes };
 
 
