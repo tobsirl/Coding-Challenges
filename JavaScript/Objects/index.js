@@ -15,4 +15,15 @@ jonas; //?
 // challenge
 const result = `${jonas['firstName']} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`;
 
-result; //?
+function convertToNumber(obj) {
+  let object = {};
+  const test = Object.entries(obj).map(([key, value]) => {
+    return {
+      ...object,
+      [key]: Number(value),
+    };
+  });
+  return test;
+}
+
+convertToNumber({ piano: '200', tv: '300', stereo: '400' }); //?
