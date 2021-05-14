@@ -8,7 +8,7 @@ true if at least one Ruby developer has signed up; or
 false if there will be no Ruby developers.
 */
 
-function isRubyComing(list) {
+export default function isRubyComing(list) {
   return list.some((dev) => dev.language === 'Ruby');
 }
 
