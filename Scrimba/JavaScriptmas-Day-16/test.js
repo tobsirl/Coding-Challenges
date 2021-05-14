@@ -9,7 +9,7 @@ describe('insertDashes()', () => {
     const result = insertDashes(value);
 
     // assert
-    expect(result).toBe('a-b-c c-a-b-c');
+    expect(result).toBe(' a-b-c c-a-b-c');
   });
 
   test('should insert dashes in between chars 2', () => {

@@ -9,6 +9,7 @@ PART 2: STRETCH GOAL
 
 const email = document.getElementById('email-input');
 const form = document.getElementById('myForm');
+const hide = document.querySelector('.warning');
 
 function validateEmail(email) {
   const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -20,4 +21,8 @@ form.addEventListener('submit', function (e) {
   const result = validateEmail(email.value);
   // console.log('email: ', email.value);
   console.log(result);
+  hide.classList.add('.hide');
+  if (!result) {
+    hide.classList.remove('hide')
+  }
 });

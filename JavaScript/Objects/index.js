@@ -16,14 +16,7 @@ jonas; //?
 const result = `${jonas['firstName']} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`;
 
 function convertToNumber(obj) {
-  let object = {};
-  const test = Object.entries(obj).map(([key, value]) => {
-    return {
-      ...object,
-      [key]: Number(value),
-    };
-  });
-  return test;
+  return Object.fromEntries(Object.entries(obj).map(([k, v]) => [k, Number(v)]));
 }
 
 convertToNumber({ piano: '200', tv: '300', stereo: '400' }); //?
