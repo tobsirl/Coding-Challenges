@@ -6,6 +6,9 @@
   "scripts": {
     "test": "jest --watch"
   },
+  "jest": {
+    "verbose": true
+  },
   "keywords": [],
   "author": "Paul Tobin <tobster111@gmail.com>",
   "license": "ISC",
