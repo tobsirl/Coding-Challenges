@@ -1,4 +1,4 @@
-export const list1 = [
+module.exports = list1 = [
   {
     firstName: 'Sofia',
     lastName: 'I.',
@@ -25,7 +25,7 @@ export const list1 = [
   },
 ];
 
-export const list2 = [
+module.exports = list2 = [
   {
     firstName: 'Sofia',
     lastName: 'I.',
