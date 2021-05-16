@@ -1,38 +1,3 @@
-const list1 = [
-  {
-    firstName: 'Noah',
-    lastName: 'M.',
-    country: 'Switzerland',
-    continent: 'Europe',
-    age: 19,
-    language: 'C',
-  },
-  {
-    firstName: 'Anna',
-    lastName: 'R.',
-    country: 'Liechtenstein',
-    continent: 'Europe',
-    age: 52,
-    language: 'JavaScript',
-  },
-  {
-    firstName: 'Ramon',
-    lastName: 'R.',
-    country: 'Paraguay',
-    continent: 'Americas',
-    age: 29,
-    language: 'Ruby',
-  },
-  {
-    firstName: 'George',
-    lastName: 'B.',
-    country: 'England',
-    continent: 'Europe',
-    age: 81,
-    language: 'C',
-  },
-];
-
 // function countLanguages(list) {
 //   const languageCount = list.map((dev) => {
 //     let c = 0;
@@ -72,10 +37,8 @@ const list1 = [
 //   };
 // }
 
-function countLanguages(list) {
+module.exports = function countLanguages(list) {
   return list
     .map((el) => el['language'])
     .reduce((accum, curr) => (accum[curr] = accum[curr] + 1 || 1), {});
-}
-
-countLanguages(list1); //?
+};
