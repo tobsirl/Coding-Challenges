@@ -54,3 +54,14 @@ filteredArray(
   ],
   3
 ); //?
+
+let myNestedArray = [
+  // Only change code below this line
+  ['unshift', false, 1, 2, 3, 'complex', 'nested'],
+  [['loop', 'shift', 6, 7, 1000, 'method']][
+    ('concat', false, 'deep', 'spread', 'array')
+  ],
+  ['mutate', 1327.98, 'deeper', 'slice', 'push'],
+  ['iterate', 1.3849, 7, 'deepest', 'arbitrary', 'depth'],
+  // Only change code above this line
+];
