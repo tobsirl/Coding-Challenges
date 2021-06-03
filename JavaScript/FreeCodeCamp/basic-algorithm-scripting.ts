@@ -4,3 +4,10 @@ function convertToF(celsius: number): number {
 }
 
 convertToF(30);
+
+// Reverse a String
+function reverseString(str: string): string {
+  return str.split('').reverse().join('');
+}
+
+reverseString('hello');
