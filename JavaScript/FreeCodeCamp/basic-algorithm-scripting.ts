@@ -11,3 +11,14 @@ function reverseString(str: string): string {
 }
 
 reverseString('hello');
+
+// Factorialize a Number
+function factorialize(num: number): number {
+  if (num === 0) {
+    return 1;
+  }
+
+  return num * factorialize(num - 1);
+}
+
+factorialize(5);
