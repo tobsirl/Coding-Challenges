@@ -22,3 +22,13 @@ function factorialize(num: number): number {
 }
 
 factorialize(5);
+
+// Find the Longest Word in a StringPassed
+function findLongestWordLength(str: string): number {
+  return str
+    .split(' ')
+    .map((word) => word.length)
+    .sort((a, b) => b - a)[0];
+}
+
+findLongestWordLength('The quick brown fox jumped over the lazy dog');
