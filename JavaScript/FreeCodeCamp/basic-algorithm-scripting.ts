@@ -48,12 +48,12 @@ function largestOfFour(arr: Array<number>): Array<number> {
   return results;
 }
 
-largestOfFour([
-  [4, 5, 1, 3],
-  [13, 27, 18, 26],
-  [32, 35, 37, 39],
-  [1000, 1001, 857, 1],
-]);
+// largestOfFour([
+//   [4, 5, 1, 3],
+//   [13, 27, 18, 26],
+//   [32, 35, 37, 39],
+//   [1000, 1001, 857, 1],
+// ]);
 
 // Confirm the EndingPassed
 function confirmEnding(str: string, target: string): boolean {
@@ -61,3 +61,14 @@ function confirmEnding(str: string, target: string): boolean {
 }
 
 confirmEnding('Bastian', 'n');
+
+// Repeat a String Repeat a StringPassed
+function repeatStringNumTimes(str: string, num: number): string {
+  let string = '';
+  for (let i = 0; i < num; i++) {
+    string += str;
+  }
+  return string;
+}
+
+repeatStringNumTimes('abc', 3); 
