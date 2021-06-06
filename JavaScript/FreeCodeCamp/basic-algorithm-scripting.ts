@@ -71,4 +71,11 @@ function repeatStringNumTimes(str: string, num: number): string {
   return string;
 }
 
-repeatStringNumTimes('abc', 3); 
+repeatStringNumTimes('abc', 3);
+
+// Truncate a StringPassed
+function truncateString(str: string, num: number): string {
+  return str.length > num ? str.slice(0, num) + '...' : str;
+}
+
+truncateString('A-tisket a-tasket A green and yellow basket', 8); //?
