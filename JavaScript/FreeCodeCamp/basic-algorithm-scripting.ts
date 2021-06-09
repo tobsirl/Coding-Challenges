@@ -86,3 +86,10 @@ function findElement(arr: number[], func) {
 }
 
 findElement([1, 2, 3, 4], (num: number) => num % 2 === 0);
+
+// boo who
+function booWho(bool) {
+  return typeof bool === 'boolean'
+}
+
+booWho(null);
