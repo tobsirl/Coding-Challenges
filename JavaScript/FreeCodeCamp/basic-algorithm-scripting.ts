@@ -78,4 +78,11 @@ function truncateString(str: string, num: number): string {
   return str.length > num ? str.slice(0, num) + '...' : str;
 }
 
-truncateString('A-tisket a-tasket A green and yellow basket', 8); //?
+truncateString('A-tisket a-tasket A green and yellow basket', 8);
+
+// Finders KeepersPassed
+function findElement(arr: number[], func) {
+  return arr.find(func);
+}
+
+findElement([1, 2, 3, 4], (num: number) => num % 2 === 0);
