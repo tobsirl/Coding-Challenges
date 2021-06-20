@@ -89,7 +89,17 @@ findElement([1, 2, 3, 4], (num: number) => num % 2 === 0);
 
 // boo who
 function booWho(bool) {
-  return typeof bool === 'boolean'
+  return typeof bool === 'boolean';
 }
 
 booWho(null);
+
+// Title Case a Sentence
+function titleCase(str: string): string {
+  return str
+    .split(' ')
+    .map((word) => word[0].toUpperCase() + word.slice(1, word.length))
+    .join(' ');
+}
+
+titleCase("I'm a little tea pot"); //?
