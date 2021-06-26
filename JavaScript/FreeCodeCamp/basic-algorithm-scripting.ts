@@ -113,3 +113,10 @@ function frankenSplice(arr1: number[], arr2: number[], n: number): number[] {
 }
 
 frankenSplice([1, 2, 3], [4, 5, 6], 1); //?
+
+// Falsy Bouncer
+function bouncer(arr: (number | string | boolean)[]) {
+  return arr.filter((value) => Boolean(value));
+}
+
+bouncer([7, 'ate', '', false, 9]); 
