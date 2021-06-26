@@ -127,3 +127,15 @@ function getIndexToIns(arr: number[], num: number) {
 }
 
 getIndexToIns([40, 60], 50);
+
+// Mutations
+function mutation(arr: string[]) {
+  return arr[1]
+    .toLowerCase()
+    .split('')
+    .every((letter) => {
+      return arr[0].toLowerCase().indexOf(letter) != -1;
+    });
+}
+
+mutation(['hello', 'hey']); //?
