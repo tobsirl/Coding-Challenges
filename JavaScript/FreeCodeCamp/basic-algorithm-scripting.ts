@@ -119,4 +119,11 @@ function bouncer(arr: (number | string | boolean)[]) {
   return arr.filter((value) => Boolean(value));
 }
 
-bouncer([7, 'ate', '', false, 9]); 
+bouncer([7, 'ate', '', false, 9]);
+
+// Where do I Belong
+function getIndexToIns(arr: number[], num: number) {
+  return [...arr, num].sort((a, b) => a - b).indexOf(num);
+}
+
+getIndexToIns([40, 60], 50);
