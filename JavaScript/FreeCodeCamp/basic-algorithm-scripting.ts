@@ -139,3 +139,19 @@ function mutation(arr: string[]) {
 }
 
 mutation(['hello', 'hey']); //?
+
+// Chunky Monkey
+function chunkArrayInGroups(arr: (number | string)[], size: number) {
+  const chunked = [];
+  let index = 0;
+
+  while (index < arr.length) {
+    chunked.push(arr.slice(index, index + size));
+    index += size;
+  }
+
+  return chunked;
+}
+
+chunkArrayInGroups(['a', 'b', 'c', 'd'], 2);
+chunkArrayInGroups([0, 1, 2, 3, 4, 5], 3);
