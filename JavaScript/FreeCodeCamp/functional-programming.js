@@ -113,3 +113,15 @@ const addOne = incrementer(1);
 addOne;
 
 fixedValue;
+
+// Pass Arguments to Avoid External Dependence in a Function
+// The global variable
+var fixedValue = 4;
+
+// Only change code below this line
+function incrementer(value) {
+  return value + 1;
+  // Only change code above this line
+}
+
+const defferentValue = incrementer(fixedValue);
