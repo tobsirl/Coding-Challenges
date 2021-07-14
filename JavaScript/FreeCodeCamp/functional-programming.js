@@ -434,7 +434,14 @@ var watchList = [
 
 // Only change code below this line
 
-var filteredList;
+var filteredList = watchList
+  .filter((movie) => Number(movie.imdbRating) >= 8.0)
+  .map((movie) => {
+    return {
+      title: movie['Title'],
+      rating: movie['imdbRating'],
+    };
+  });
 
 // Only change code above this line
 
