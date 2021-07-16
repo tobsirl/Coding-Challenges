@@ -633,9 +633,17 @@ var watchList = [
 
 function getRating(watchList) {
   // Only change code below this line
-  var averageRating;
+  let count = watchList.filter(
+    (movieCount) => movieCount.Director === 'Christopher Nolan'
+  ).length;
+  var averageRating =
+    watchList
+      .filter((movie) => movie.Director === 'Christopher Nolan')
+      .reduce((avgRating, rating) => avgRating + Number(rating.imdbRating), 0) /
+    count;
 
   // Only change code above this line
   return averageRating;
 }
-console.log(getRating(watchList));
+
+getRating(watchList); //?
