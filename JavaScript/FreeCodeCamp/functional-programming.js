@@ -657,4 +657,14 @@ const squareList = (arr) => {
   // Only change code above this line
 };
 
+const squareListReduce = (arr) => {
+  // Only change code below this line
+  return arr.reduce((accum, curr) => {
+    return Number.isInteger(curr) && curr > 0 ? [...accum, curr ** 2] : accum;
+  }, []);
+
+  // Only change code above this line
+};
+
 const squaredIntegers = squareList([-3, 4.8, 5, 3, -3.2]);
+const squaredIntegersReduce = squareListReduce([-3, 4.8, 5, 3, -3.2]);
