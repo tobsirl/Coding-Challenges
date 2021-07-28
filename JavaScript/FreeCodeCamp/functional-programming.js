@@ -651,9 +651,10 @@ getRating(watchList); //?
 // Use Higher-Order Functions map, filter, or reduce to Solve a Complex Problem
 const squareList = (arr) => {
   // Only change code below this line
-  return arr;
+  return arr
+    .filter((pos) => pos > 0 && pos % 1 === 0)
+    .map((square) => square ** 2);
   // Only change code above this line
 };
 
 const squaredIntegers = squareList([-3, 4.8, 5, 3, -3.2]);
-console.log(squaredIntegers);
