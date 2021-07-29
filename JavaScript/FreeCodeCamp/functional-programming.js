@@ -673,7 +673,8 @@ const squaredIntegersReduce = squareListReduce([-3, 4.8, 5, 3, -3.2]);
 function alphabeticalOrder(arr) {
   // Only change code below this line
 
-
+  return arr.sort((a, b) => b - a);
   // Only change code above this line
 }
-alphabeticalOrder(["a", "d", "c", "a", "z", "g"]);
+
+alphabeticalOrder(['a', 'd', 'c', 'a', 'z', 'g']);
