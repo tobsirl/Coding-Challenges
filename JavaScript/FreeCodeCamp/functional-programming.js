@@ -668,3 +668,12 @@ const squareListReduce = (arr) => {
 
 const squaredIntegers = squareList([-3, 4.8, 5, 3, -3.2]);
 const squaredIntegersReduce = squareListReduce([-3, 4.8, 5, 3, -3.2]);
+
+// Sort an Array Alphabetically using the sort Method
+function alphabeticalOrder(arr) {
+  // Only change code below this line
+
+
+  // Only change code above this line
+}
+alphabeticalOrder(["a", "d", "c", "a", "z", "g"]);
