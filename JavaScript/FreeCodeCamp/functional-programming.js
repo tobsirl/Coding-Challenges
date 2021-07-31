@@ -709,7 +709,11 @@ sentensify('May-the-force-be-with-you');
 // Apply Functional Programming to Convert Strings to URL Slugs
 // Only change code below this line
 function urlSlug(title) {
-
-
+  return title.toLowerCase().trim().split(/\s+/).join('-');
 }
 // Only change code above this line
+
+urlSlug('Winter Is Coming');
+urlSlug(' Winter Is  Coming');
+urlSlug('A Mind Needs Books Like A Sword Needs A Whetstone');
+urlSlug('Hold The Door');
