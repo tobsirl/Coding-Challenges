@@ -717,3 +717,12 @@ urlSlug('Winter Is Coming');
 urlSlug(' Winter Is  Coming');
 urlSlug('A Mind Needs Books Like A Sword Needs A Whetstone');
 urlSlug('Hold The Door');
+
+// Use the every Method to Check that Every Element in an Array Meets a Criteria
+function checkPositive(arr) {
+  // Only change code below this line
+
+
+  // Only change code above this line
+}
+checkPositive([1, 2, 3, -4, 5]);
