@@ -749,3 +749,5 @@ function addCurry(x) {
   // Only change code above this line
 }
 addCurry(10)(20)(30);
+addCurry(1)(2)(3);
+addCurry(11)(22)(33);
