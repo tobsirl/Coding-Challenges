@@ -15,3 +15,12 @@ game.name.push('Mr. Green');
 game.murderer;
 game.weapons;
 game.name; //?
+
+// destructuring
+const { weapon, location } = {
+  name: 'Rusty',
+  room: 'kitchen',
+  weapon: 'candlestick',
+};
+
+weapon
