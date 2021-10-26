@@ -17,10 +17,12 @@ game.weapons;
 game.name; //?
 
 // destructuring
-const { weapon, location } = {
+const { weapon, room, name } = {
   name: 'Rusty',
   room: 'kitchen',
   weapon: 'candlestick',
 };
 
-weapon
+weapon;
+room;
+name;
