@@ -38,7 +38,13 @@ const suspects = [
   { name: 'Miss Scarlet', color: 'red' },
 ];
 
-const [orange, red] = suspects.map(({ color }) => color);
+// const [orange, red] = suspects.map(({ color }) => color);
+const [orange, red] = [suspects[0].color, suspects[1].color];
+
+const [{ color: firstColor }, { color: secondColor }] = suspects;
 
 red;
 orange;
+
+firstColor
+secondColor
