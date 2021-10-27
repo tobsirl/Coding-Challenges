@@ -7,12 +7,21 @@ const game = {
 
 game['suspects'];
 
-const suspects = game.suspects.map(({ name, color }) => {
-  return {
-    personsName: name,
-    color,
-  };
-});
+// const suspects = game.suspects.map(({ name, color }) => {
+//   if (name === 'Rusty') {
+//     return {
+//       name,
+//       color,
+//       guilty: true,
+//     };
+//   }
+//   return {
+//     name,
+//     color,
+//   };
+// });
+
+// suspects
 
 function getSuspects() {
   let result = [];
@@ -23,3 +32,13 @@ function getSuspects() {
 }
 
 getSuspects(); //?
+
+const suspects = [
+  { name: 'Rusty', color: 'orange' },
+  { name: 'Miss Scarlet', color: 'red' },
+];
+
+const [orange, red] = suspects.map(({ color }) => color);
+
+red;
+orange;
