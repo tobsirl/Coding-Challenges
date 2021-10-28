@@ -11,3 +11,7 @@ function CreateSuspectObjects(name) {
 const suspects = ['Miss Scarlet', 'Colonel Mustard', 'Mr. White'];
 
 const suspectList = [];
+
+suspects.map((name) => suspectList.push(CreateSuspectObjects(name)));
+
+suspectList; //?
