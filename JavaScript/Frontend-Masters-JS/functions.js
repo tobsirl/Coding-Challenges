@@ -25,17 +25,18 @@ _.each = function (list, callback) {
     }
   } else {
     for (const key in list) {
-      if (Object.hasOwnProperty.call(list, key)) {
-        const element = list[key];
-      }
+      callback(list[key], key, list);
     }
   }
 };
 
-_.each(['sally', 'georgie', 'porgie'], function (name, i, list) {
-  if (list[i + 1]) {
-    console.log(name, 'is younger than ', list[i + 1]);
-  } else {
-    console.log(name, 'is the oldest');
+_.each(
+  { name: 'sally', name: 'georgie', name: 'porgie' },
+  function (name, i, list) {
+    if (list[i + 1]) {
+      console.log(name, 'is younger than ', list[i + 1]);
+    } else {
+      console.log(name, 'is the oldest');
+    }
   }
-});
+);
