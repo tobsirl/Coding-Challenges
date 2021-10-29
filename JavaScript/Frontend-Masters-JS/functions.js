@@ -16,7 +16,7 @@ suspects.map((name) => suspectList.push(CreateSuspectObjects(name)));
 
 suspectList; //?
 
-const _ = {};
+export const _ = {};
 
 _.each = function (list, callback) {
   if (Array.isArray(list)) {
