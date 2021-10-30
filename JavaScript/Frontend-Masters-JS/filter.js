@@ -84,3 +84,13 @@ _.filter = function (arr, callback) {
   }
   return storage;
 };
+
+function findSuspect(suspectObject) {
+  return suspectObject.present;
+}
+
+_.filter(videoData, function (suspectObject) {
+  return suspectObject.present;
+});
+
+_.filter(videoData, findSuspect); //?
