@@ -40,3 +40,7 @@ _.each(
     }
   }
 );
+
+_.map = function(list) {
+  
+}
