@@ -98,3 +98,12 @@ const filteredSuspects = _.filter(videoData, findSuspect);
 const suspectsNames = filteredSuspects.map(({ name }) => name);
 
 suspectsNames;
+
+const createTuple = (a, b, c, d) => {
+  return [
+    [a, c],
+    [b, d],
+  ];
+};
+
+createTuple('It', 'be', 'could', 'anyone', 'no one'); //?
