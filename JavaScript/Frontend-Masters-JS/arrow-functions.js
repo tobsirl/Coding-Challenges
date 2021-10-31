@@ -107,3 +107,12 @@ const createTuple = (a, b, c, d) => {
 };
 
 createTuple('It', 'be', 'could', 'anyone', 'no one'); //?
+
+const createTupleSpread = (a, b, c, ...d) => {
+  return [
+    [a, c],
+    [b, d],
+  ];
+};
+
+createTupleSpread('It', 'be', 'could', 'anyone', 'no one'); //?
