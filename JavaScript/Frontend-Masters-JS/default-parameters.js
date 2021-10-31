@@ -3,4 +3,5 @@ const add = function (a, b) {
   console.log(arguments);
   return a + b;
 };
+
 add(3);
