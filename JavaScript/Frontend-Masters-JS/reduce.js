@@ -1,6 +1,6 @@
-const reduce = function (list, cb, initial = list[0]) {
+const reduce = function (list, cb, initial) {
   // loop through list
-  let memo = initial;
+  let memo = initial || 0;
   for (let i = 0; i < list.length; i++) {
     memo = cb(list[i], memo);
 
@@ -10,3 +10,5 @@ const reduce = function (list, cb, initial = list[0]) {
   // return result
   return memo;
 };
+
+reduce([1, 2, 3], (v, sum) => v + sum, 0); //?
