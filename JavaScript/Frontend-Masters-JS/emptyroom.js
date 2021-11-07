@@ -49,6 +49,6 @@ const newDevelopment = [
   },
 ];
 
-const noRoom = newDevelopment.reduce((accum, curr) => {
-  
-}, {})
+
+
+
