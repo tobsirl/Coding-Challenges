@@ -2,7 +2,7 @@ const myAlert = () => {
   const x = 'Help! I think I found a clue!';
   let count = 0;
   const alerter = () => {
-    alert(`${x} ${++count}`);
+    console.log(`${x} ${++count}`);
   };
 
   return alerter;
@@ -11,3 +11,4 @@ const myAlert = () => {
 const funcAlert = myAlert(); // alerter is returned to funcAlert
 const funcAlert2 = myAlert();
 funcAlert(); // calls the function body of alerter
+funcAlert(); // maintains the state of the outher function, so count is incremented each time its called
