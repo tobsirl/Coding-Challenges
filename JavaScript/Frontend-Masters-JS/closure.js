@@ -26,3 +26,13 @@ const newClue = (name) => {
 const didGreenDoItWithA = newClue('Green');
 
 didGreenDoItWithA('candlestick');
+
+// closure example countClues
+const countClues = () => {
+  let n = 0;
+
+  return {
+    count: () => n++,
+    reset: () => (n = 0),
+  };
+};
