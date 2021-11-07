@@ -1,9 +1,21 @@
+// const myAlert = () => {
+//   const x = 'Help! I think I found a clue!';
+//   const alerter = () => {
+//     alert(x);
+//   };
+//   alerter();
+// };
+
+// alert();
+
 const myAlert = () => {
-  const x = "Help! I think I found a clue!";
+  const x = 'Help! I think I found a clue!';
   const alerter = () => {
     alert(x);
   };
-  alerter();
+
+  setTimeout(alerter, 1000);
+  console.log('what happens first? this log or the alert?');
 };
 
-alert()
+myAlert();
