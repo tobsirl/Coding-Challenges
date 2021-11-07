@@ -12,3 +12,17 @@ const funcAlert = myAlert(); // alerter is returned to funcAlert
 const funcAlert2 = myAlert();
 funcAlert(); // calls the function body of alerter
 funcAlert(); // maintains the state of the outher function, so count is incremented each time its called
+
+// closure example
+const newClue = (name) => {
+  const length = name.length;
+
+  return (weapon) => {
+    let clue = length + weapon.length;
+    return !!(clue % 2);
+  };
+};
+
+const didGreenDoItWithA = newClue('Green');
+
+didGreenDoItWithA('candlestick');
