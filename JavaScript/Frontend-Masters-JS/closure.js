@@ -36,3 +36,21 @@ const countClues = () => {
     reset: () => (n = 0),
   };
 };
+
+const counter = countClues();
+counter.count();
+counter.count();
+counter.count();
+counter.count();
+counter.count();
+counter.count();
+counter.reset();
+
+const counter2 = countClues();
+counter2.count();
+counter2.count();
+counter2.count();
+counter2.count();
+counter2.count();
+counter2.count();
+counter2.reset();
