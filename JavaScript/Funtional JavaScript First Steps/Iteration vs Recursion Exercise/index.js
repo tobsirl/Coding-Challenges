@@ -28,3 +28,4 @@ function recursiveFibonacci(n) {
 recursiveFibonacci(10); //?
 
 module.exports = iterativeFibonacci;
+module.exports = recursiveFibonacci;
