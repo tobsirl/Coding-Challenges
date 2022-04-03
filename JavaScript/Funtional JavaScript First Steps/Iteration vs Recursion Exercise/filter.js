@@ -33,3 +33,8 @@ function isEven(n) {
 }
 
 const evens = filter(isEven, wholes);
+
+const odds = filter((n) => {
+  // TODO your code goes here
+  return n % 2 === 1;
+}, wholes); 
