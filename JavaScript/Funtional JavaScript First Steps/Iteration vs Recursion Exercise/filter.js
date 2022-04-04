@@ -88,3 +88,12 @@ const sum = reduce(
   0,
   wholes
 );
+
+const max = reduce(
+  (accum, value) => {
+    return accum < value ? value : accum;
+  },
+  0,
+
+  [7, 1, 3, 5, 6, 2, 8, 10, 0, 4, 9]
+); 
