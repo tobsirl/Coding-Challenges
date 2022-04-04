@@ -56,4 +56,19 @@ function isPrime(n) {
   return factors.length === 0 ? true : false;
 }
 
-const primes = filter(isPrime, wholes); 
+const primes = filter(isPrime, wholes);
+
+// map
+function map(fn, array) {
+  // TODO your code goes here
+  if (length(array) === 0) return [];
+  return [fn(head(array))].concat(map(fn, tail(array)));
+}
+
+const fizzBuzz = map((n) => {
+  // TODO your code goes here
+  if (n % 15 === 0) return 'fizzbuzz';
+  if (n % 5 === 0) return 'buzz';
+  if (n % 3 === 0) return 'fizz';
+  return n;
+}, wholes); //?
