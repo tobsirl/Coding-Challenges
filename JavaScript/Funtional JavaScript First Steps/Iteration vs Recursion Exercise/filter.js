@@ -72,3 +72,19 @@ const fizzBuzz = map((n) => {
   if (n % 3 === 0) return 'fizz';
   return n;
 }, wholes); //?
+
+// reduce
+function reduce(reducerFn, initialValue, array) {
+  if (length(array) === 0) return initialValue;
+  const newInitialValue = reducerFn(initialValue, head(array));
+  return reduce(reducerFn, newInitialValue, tail(array));
+}
+
+const sum = reduce(
+  (accumulator, value) => {
+    // TODO your code here
+    return accumulator + value;
+  },
+  0,
+  wholes
+);
