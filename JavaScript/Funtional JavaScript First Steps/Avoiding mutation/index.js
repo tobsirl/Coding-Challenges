@@ -10,3 +10,8 @@ function update(index, value, array) {
     .concat([value])
     .concat(array.slice(index + 1));
 }
+
+// instead of myArray.pop();
+function pop(array) {
+  return array.slice(0, -1);
+}
