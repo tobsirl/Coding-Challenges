@@ -39,3 +39,15 @@ const map = (array, callback) => {
 };
 
 console.log(map([1, 2, 3], addTwo));
+
+/**
+ * Challenge 4
+ * The function forEach takes an array and a callback, and runs the callback on each element of the array. forEach does not return anything.
+ */
+const forEach = (array, callback) => {
+  for (let i = 0; i < array.length; i++) {
+    callback(array[i]);
+  }
+};
+
+console.log(forEach([1, 2, 3], addTwo));
