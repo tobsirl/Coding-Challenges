@@ -70,7 +70,7 @@ willCounter();
  */
 
 const addByX = (x) => {
-  return (fn) => x + fn;
+  return (y) => x + y;
 };
 
 const addByTwo = addByX(2);
