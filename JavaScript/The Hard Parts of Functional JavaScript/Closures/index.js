@@ -63,3 +63,28 @@ willCounter();
 
 jasCounter();
 willCounter();
+
+/*
+ *  Challenge 4
+ *  Now we are going to create a function addByX that returns a function that will add an input by x.
+ */
+
+const addByX = (x) => {
+  return (fn) => x + fn;
+};
+
+const addByTwo = addByX(2);
+
+// now call addByTwo with an input of 1
+addByTwo(1);
+
+// now call addByTwo with an input of 2
+addByTwo(2);
+
+const addByThree = addByX(3);
+addByThree(1); //should return 4
+addByThree(2); //should return 5
+
+const addByFour = addByX(4);
+addByFour(4); //should return 8
+addByFour(10); //should return 14
